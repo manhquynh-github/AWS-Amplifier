@@ -1,0 +1,14 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "aws-amplifier-prod-20190622205651-authRole",
+            "UnauthRoleArn": "arn:aws:iam::663760962934:role/aws-amplifier-prod-20190622205651-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::663760962934:role/aws-amplifier-prod-20190622205651-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "aws-amplifier-prod-20190622205651-deployment",
+            "UnauthRoleName": "aws-amplifier-prod-20190622205651-unauthRole",
+            "StackName": "aws-amplifier-prod-20190622205651",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:663760962934:stack/aws-amplifier-prod-20190622205651/95bc3a30-94f5-11e9-bfe5-0670872160e4"
+        }
+    }
+}
