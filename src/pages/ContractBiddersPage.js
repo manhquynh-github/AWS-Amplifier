@@ -13,19 +13,18 @@ import '../assets/css/responsive.css';
 import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 
-class HomePage extends Component {
+class ContractBiddersPage extends Component {
   render() {
     return (
       <div>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <title>srtdash - SEO Dashboard</title>
+        <title>Table Basic - srtdash</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/png" href="../assets/images/icon/favicon.ico" />
         {/* modernizr css */}
         {/*[if lt IE 8]>
-              <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-          <![endif]*/}
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]*/}
         {/* preloader area start */}
         {/* <div id="preloader">
           <div className="loader" />
@@ -121,7 +120,7 @@ class HomePage extends Component {
                         <span className="notify-title">You have 3 new notifications <a href="#">view all</a></span>
                         <div className="nofity-list">
                           <a href="#" className="notify-item">
-                            <div className="notify-thumb"> 
+                            <div className="notify-thumb">
                               <img src={require("../assets/images/author/author-img1.jpg")} alt="image" />
                             </div>
                             <div className="notify-text">
@@ -206,19 +205,23 @@ class HomePage extends Component {
               <div className="row align-items-center">
                 <div className="col-sm-6">
                   <div className="breadcrumbs-area clearfix">
-                    <h4 className="page-title pull-left">Home</h4>
+                    <h4 className="page-title pull-left">Dashboard</h4>
+                    <ul className="breadcrumbs pull-left">
+                      <li><a href="index.html">Home</a></li>
+                      <li><span>Table Basic</span></li>
+                    </ul>
                   </div>
                 </div>
                 <div className="col-sm-6 clearfix">
                   <div className="user-profile pull-right">
-                  <img className="avatar user-thumb" src={require("../assets/images/author/avatar.png")} alt="avatar" />
+                    <img className="avatar user-thumb" src={require("../assets/images/author/avatar.png")} alt="avatar" />
                     <h4 className="user-name dropdown-toggle" data-toggle="dropdown">
                       <Link
-                      to={{
-                        pathname: "/account",
-                        state: {}
-                      }}>
-                      Kumkum Rai
+                        to={{
+                          pathname: "/account",
+                          state: {}
+                        }}>
+                        Kumkum Rai
                       </Link>
                       <i className="fa fa-angle-down" />
                     </h4>
@@ -234,52 +237,76 @@ class HomePage extends Component {
             {/* page title area end */}
             <div className="main-content-inner">
               <div className="row">
-                {/* seo fact area start */}
-                <div className="col-lg-12">
-                  <div className="row">
-                    <div className="col-md-6 mt-5 mb-3">
-                      <div className="card">
-                        <div className="seo-fact sbg1">
-                          <div className="p-4 d-flex justify-content-between align-items-center">
-                            <div className="seofct-icon"><i className="ti-arrow-up" /> SELL</div>
-                            <h2>628</h2>
-                          </div>
-                          <canvas id="seolinechart1" height={50} />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 mt-md-5 mb-3">
-                      <div className="card">
-                        <div className="seo-fact sbg2">
-                          <div className="p-4 d-flex justify-content-between align-items-center">
-                            <div className="seofct-icon"><i className="ti-arrow-down" />
-                            <Link
-                              to={{
-                              pathname: "/forsale",
-                              state: {}
-                            }}>
-                                BUY
-                              </Link>
-                            </div>
-                            <h2>734</h2>
-                          </div>
-                          <canvas id="seolinechart2" height={50} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* seo fact area end */}
-                {/* map area start */}
-                <div className="col-lg-12">
+                {/* table light start */}
+                <div className="col-lg-12 mt-5">
                   <div className="card">
                     <div className="card-body">
-                      <h4 className="header-title">Partners</h4>
-                      <div id="seomap" />
+                      <h4 className="header-title">Details about the project - Dưa hấu Quảng Trị</h4>
+                      <div className="single-table">
+                        <div className="table-responsive">
+                          <table className="table text-center">
+                            <thead className="text-uppercase bg-light">
+                              <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Suggested Price</th>
+                                <th scope="col">date</th>
+                                <th scope="col">Meet the standards</th>
+                                <th scope="col">action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">John Wick</th>
+                                <td>723$</td>
+                                <td>23 / 07 / 2019</td>
+                                <td><span className="status-p bg-primary">OK</span></td>
+                                <td>
+                                  <button type="button" className="btn btn-success btn-xs mb-3">Confirm transaction </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">John Wick</th>
+                                <td>723$</td>
+                                <td>23 / 07 / 2019</td>
+                                <td><span className="status-p bg-primary">OK</span></td>
+                                <td>
+                                  <button type="button" className="btn btn-success btn-xs mb-3">Confirm transaction </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">John Wick</th>
+                                <td>723$</td>
+                                <td>23 / 07 / 2019</td>
+                                <td><span className="status-p bg-primary">OK</span></td>
+                                <td>
+                                  <button type="button" className="btn btn-success btn-xs mb-3">Confirm transaction </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">John Wick</th>
+                                <td>723$</td>
+                                <td>23 / 07 / 2019</td>
+                                <td><span className="status-p bg-primary">OK</span></td>
+                                <td>
+                                  <button type="button" className="btn btn-success btn-xs mb-3">Confirm transaction </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div className="pagination_area pull-right mt-5">
+                            <ul>
+                              <li><a href="#"><i className="fa fa-chevron-left" /></a></li>
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#"><i className="fa fa-chevron-right" /></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                {/* map area end */}
+                {/* table light end */}
               </div>
             </div>
           </div>
@@ -311,7 +338,7 @@ class HomePage extends Component {
                     <span className="time"><i className="ti-time" />09:35</span>
                   </div>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                    </p>
+                  </p>
                 </div>
                 <div className="timeline-task">
                   <div className="icon bg2">
@@ -322,7 +349,7 @@ class HomePage extends Component {
                     <span className="time"><i className="ti-time" />7 Minutes Ago</span>
                   </div>
                   <p>Lorem ipsum dolor sit amet consectetur.
-                    </p>
+                  </p>
                 </div>
                 <div className="timeline-task">
                   <div className="icon bg2">
@@ -342,7 +369,7 @@ class HomePage extends Component {
                     <span className="time"><i className="ti-time" />09:35</span>
                   </div>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                    </p>
+                  </p>
                 </div>
                 <div className="timeline-task">
                   <div className="icon bg3">
@@ -353,7 +380,7 @@ class HomePage extends Component {
                     <span className="time"><i className="ti-time" />01 minutes ago</span>
                   </div>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                    </p>
+                  </p>
                 </div>
                 <div className="timeline-task">
                   <div className="icon bg1">
@@ -364,7 +391,7 @@ class HomePage extends Component {
                     <span className="time"><i className="ti-time" />09:35</span>
                   </div>
                   <p>Hello sir , where are you, i am egerly waiting for you.
-                    </p>
+                  </p>
                 </div>
                 <div className="timeline-task">
                   <div className="icon bg2">
@@ -375,7 +402,7 @@ class HomePage extends Component {
                     <span className="time"><i className="ti-time" />09:35</span>
                   </div>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                    </p>
+                  </p>
                 </div>
                 <div className="timeline-task">
                   <div className="icon bg2">
@@ -395,7 +422,7 @@ class HomePage extends Component {
                     <span className="time"><i className="ti-time" />09:35</span>
                   </div>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                    </p>
+                  </p>
                 </div>
                 <div className="timeline-task">
                   <div className="icon bg3">
@@ -406,7 +433,7 @@ class HomePage extends Component {
                     <span className="time"><i className="ti-time" />09:35</span>
                   </div>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                    </p>
+                  </p>
                 </div>
               </div>
             </div>
@@ -472,17 +499,10 @@ class HomePage extends Component {
         {/* offset area end */}
         {/* jquery latest version */}
         {/* bootstrap 4 js */}
-        {/* start chart js */}
-        {/* start highcharts js */}
-        {/* start amcharts */}
-        {/* all line chart activation */}
-        {/* all pie chart */}
-        {/* all bar chart */}
-        {/* all map chart */}
         {/* others plugins */}
       </div>
     );
-  };
+  }
 }
 
-export default withRouter(HomePage);
+export default withRouter(ContractBiddersPage);

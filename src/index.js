@@ -8,6 +8,8 @@ import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ForSalePage from './pages/ForSalePage';
 import PostContractPage from './pages/PostContractPage';
+import AccountPage from './pages/AccountPage';
+import ContractBiddersPage from './pages/ContractBiddersPage';
 
 const routing = (
   <Router>
@@ -16,6 +18,8 @@ const routing = (
         <Route exact path="/" component={HomePage} />
         <Route exact path="/forsale" component={ForSalePage} />
         <Route exact path="/postcontract" component={PostContractPage} />
+        <Route exact path="/account" component={AccountPage} />
+        <Route exact path="/contractbidders" component={ContractBiddersPage} />
         {/* <Route path="/detail/:id" component={DetailPage} /> */}
       </Switch>
     </div>

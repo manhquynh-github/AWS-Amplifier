@@ -10,7 +10,8 @@ import '../assets/css/typography.css';
 import '../assets/css/default-css.css';
 import '../assets/css/styles.css';
 import '../assets/css/responsive.css';
-import { withRouter } from "react-router";
+import { Link } from 'react-router-dom'; 
+import { withRouter } from "react-router"; 
 
 class PostContractPage extends Component {
 
@@ -210,7 +211,16 @@ class PostContractPage extends Component {
               <div className="col-sm-6 clearfix">
                 <div className="user-profile pull-right">
                   <img className="avatar user-thumb" src={require("../assets/images/author/avatar.png")} alt="avatar" />
-                  <h4 className="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i className="fa fa-angle-down" /></h4>
+                  <h4 className="user-name dropdown-toggle" data-toggle="dropdown">
+                    <Link
+                      to={{
+                        pathname: "/account",
+                        state: {}
+                      }}>
+                      Kumkum Rai
+                      </Link>
+                    <i className="fa fa-angle-down" />
+                  </h4>
                   <div className="dropdown-menu">
                     <a className="dropdown-item" href="#">Message</a>
                     <a className="dropdown-item" href="#">Settings</a>
