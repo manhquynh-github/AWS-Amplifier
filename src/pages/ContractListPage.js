@@ -12,8 +12,36 @@ import '../assets/css/styles.css';
 import '../assets/css/responsive.css';
 import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogActions from '@material-ui/core/DialogActions';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class ContractListPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      open: false,
+    }
+    this.onBidClick = this.onBidClick.bind(this);
+    this.onBidOkClick = this.onBidOkClick.bind(this);
+  }
+
+  onBidOkClick() {
+    this.setState({
+      open: false,
+    })
+  }
+
+  onBidClick() {
+    this.setState({
+      open: true
+    });
+  }
+
   render() {
     return (
       <div>
@@ -250,7 +278,7 @@ class ContractListPage extends Component {
                               <td className="sell">13 Ton</td>
                               <td className="attachments">JGAP</td>
                               <td className="stats-chart">
-                                <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter">Bid</button>
+                                <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>
                                 <div className="modal fade" id="exampleModalCenter">
                                   <div className="modal-dialog modal-dialog-centered" role="document">
                                     <div className="modal-content">
@@ -288,7 +316,7 @@ class ContractListPage extends Component {
                               <td className="sell">23 Ton</td>
                               <td className="attachments">VietGAP</td>
                               <td className="stats-chart">
-                                <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter">Bid</button>
+                                <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>
                                 <div className="modal fade" id="exampleModalCenter">
                                   <div className="modal-dialog modal-dialog-centered" role="document">
                                     <div className="modal-content">
@@ -326,7 +354,7 @@ class ContractListPage extends Component {
                               <td className="sell">12 Ton</td>
                               <td className="attachments">JGAP</td>
                               <td className="stats-chart">
-                                <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter">Bid</button>
+                                <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>
                                 <div className="modal fade" id="exampleModalCenter">
                                   <div className="modal-dialog modal-dialog-centered" role="document">
                                     <div className="modal-content">
@@ -364,7 +392,7 @@ class ContractListPage extends Component {
                               <td className="sell">123 ton</td>
                               <td className="attachments">Global Gap</td>
                               <td className="stats-chart">
-                                <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter">Bid</button>
+                                <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>
                                 <div className="modal fade" id="exampleModalCenter">
                                   <div className="modal-dialog modal-dialog-centered" role="document">
                                     <div className="modal-content">
@@ -596,6 +624,31 @@ class ContractListPage extends Component {
         {/* all line chart activation */}
         {/* all pie chart */}
         {/* others plugins */}
+        <Dialog          
+          fullWidth
+          open={this.state.open}
+        >
+          <DialogTitle>New Bidding</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Enter your bidding price
+            </DialogContentText>
+            <TextField
+              autoFocus
+              margin="dense"
+              type="number"
+              fullWidth
+            />           
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={this.onBidOkClick} color="primary">
+              Cancel
+          </Button>
+            <Button onClick={this.onBidOkClick} color="primary">
+              OK
+          </Button>
+          </DialogActions>
+        </Dialog>
       </div>
     );
   }
