@@ -31,8 +31,7 @@ class ForSalePage extends Component {
           <div className="loader" />
         </div> */}
         {/* preloader area end */}
-        {/* page container area start */}
-        <div className="page-container">
+        
 
           {/* main content area start */}
           <div className="main-content">
@@ -327,8 +326,7 @@ class ForSalePage extends Component {
             </div>
           </footer>
           {/* footer area end*/}
-        </div>
-        {/* page container area end */}
+        
         {/* offset area start */}
         <div className="offset-area">
           <div className="offset-close"><i className="ti-close" /></div>
