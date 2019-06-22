@@ -1,14 +1,14 @@
 {
     "prod": {
         "awscloudformation": {
-            "AuthRoleName": "aws-amplifier-prod-20190622205651-authRole",
-            "UnauthRoleArn": "arn:aws:iam::663760962934:role/aws-amplifier-prod-20190622205651-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::663760962934:role/aws-amplifier-prod-20190622205651-authRole",
+            "AuthRoleName": "cloud-farm-prod-20190622212711-authRole",
+            "UnauthRoleArn": "arn:aws:iam::663760962934:role/cloud-farm-prod-20190622212711-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::663760962934:role/cloud-farm-prod-20190622212711-authRole",
             "Region": "ap-southeast-1",
-            "DeploymentBucketName": "aws-amplifier-prod-20190622205651-deployment",
-            "UnauthRoleName": "aws-amplifier-prod-20190622205651-unauthRole",
-            "StackName": "aws-amplifier-prod-20190622205651",
-            "StackId": "arn:aws:cloudformation:ap-southeast-1:663760962934:stack/aws-amplifier-prod-20190622205651/95bc3a30-94f5-11e9-bfe5-0670872160e4"
+            "DeploymentBucketName": "cloud-farm-prod-20190622212711-deployment",
+            "UnauthRoleName": "cloud-farm-prod-20190622212711-unauthRole",
+            "StackName": "cloud-farm-prod-20190622212711",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:663760962934:stack/cloud-farm-prod-20190622212711/d25f0180-94f9-11e9-a173-0a04c4887732"
         }
     }
 }
