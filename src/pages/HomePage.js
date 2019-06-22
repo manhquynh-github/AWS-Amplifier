@@ -10,38 +10,18 @@ import '../assets/css/typography.css';
 import '../assets/css/default-css.css';
 import '../assets/css/styles.css';
 import '../assets/css/responsive.css';
-import { Redirect } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 
-class ForSalePage extends Component {
-
-  constructor() {
-    super();
-    this.onPostContractClick = this.onPostContractClick.bind(this);
-  }
-
-  onPostContractClick() {
-    this.props.history.push({
-      pathname: `/postcontract`,
-    });
-    // return (
-    //   <Redirect
-    //     to={{
-    //       pathname: "/forsale",
-    //       state: {}
-    //     }}/>
-    // )
-  }
-
-  render()
-  {
-    return(
+class HomePage extends Component {
+  render() {
+    return (
       <div>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <title>srtdash - ICO Dashboard</title>
+        <title>srtdash - SEO Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <link rel="shortcut icon" type="image/png" href="../assets/images/icon/favicon.ico" />
         {/* modernizr css */}
         {/*[if lt IE 8]>
               <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -51,7 +31,6 @@ class ForSalePage extends Component {
           <div className="loader" />
         </div> */}
         {/* preloader area end */}
-        
 
           {/* main content area start */}
           <div className="main-content">
@@ -142,7 +121,7 @@ class ForSalePage extends Component {
                         <span className="notify-title">You have 3 new notifications <a href="#">view all</a></span>
                         <div className="nofity-list">
                           <a href="#" className="notify-item">
-                            <div className="notify-thumb">
+                            <div className="notify-thumb"> 
                               <img src={require("../assets/images/author/author-img1.jpg")} alt="image" />
                             </div>
                             <div className="notify-text">
@@ -227,16 +206,12 @@ class ForSalePage extends Component {
               <div className="row align-items-center">
                 <div className="col-sm-6">
                   <div className="breadcrumbs-area clearfix">
-                    <h4 className="page-title pull-left">Buy</h4>
-                    <ul className="breadcrumbs pull-left">
-                      <li><a href="index.html">Home</a></li>
-                      <li><span>Buy</span></li>
-                    </ul>
+                    <h4 className="page-title pull-left">Home</h4>
                   </div>
                 </div>
                 <div className="col-sm-6 clearfix">
                   <div className="user-profile pull-right">
-                    <img className="avatar user-thumb" src={require("../assets/images/author/avatar.png")} alt="avatar" />
+                  <img className="avatar user-thumb" src={require("../assets/images/author/avatar.png")} alt="avatar" />
                     <h4 className="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i className="fa fa-angle-down" /></h4>
                     <div className="dropdown-menu">
                       <a className="dropdown-item" href="#">Message</a>
@@ -249,104 +224,65 @@ class ForSalePage extends Component {
             </div>
             {/* page title area end */}
             <div className="main-content-inner">
-              {/* market value area start */}
-              <div className="row mt-5 mb-5">
-                <div className="col-12">
-                  <div className="exchange-btn">
-                    <button type="submit" onClick={this.onPostContractClick} >Register To Buy The Project Now</button>
-                  </div>
-                  <div className="card">
-                    <div className="card-body">
-                      <div className="d-sm-flex justify-content-between align-items-center">
-                        <h4 className="header-title mb-0">List Of Farmer Projects For Sale</h4>
-                        <select className="custome-select border-0 pr-3">
-                          <option selected>Last 24 Hours</option>
-                          <option value={0}>01 July 2018</option>
-                        </select>
-                      </div>
-                      <div className="market-status-table mt-4">
-                        <div className="table-responsive">
-                          <table className="dbkit-table">
-                            <tbody><tr className="heading-td">
-                              <td className="mv-icon">Image</td>
-                              <td className="coin-name">Project</td>
-                              <td className="buy">Starting price</td>
-                              <td className="sell">Sale date</td>
-                              <td className="sell">Scale</td>
-                              <td className="attachments">Certifications</td>
-                              <td className="stats-chart">Number of current bidders</td>
-                            </tr>
-                              <tr>
-                                <td className="mv-icon"><img src={require("../assets/images/icon/market-value/icon1.png")} alt="icon" />
-                                </td>
-                                <td className="coin-name">Hồ tiêu Phú Quốc</td>
-                                <td className="buy">$ 56746,857</td>
-                                <td className="sell">22/6/2019</td>
-                                <td className="sell">123 ton</td>
-                                <td className="attachments">JGAP</td>
-                                <td className="stats-chart">23 <img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
-                              </tr>
-                              <tr>
-                                <td className="mv-icon">
-                                  <div className="mv-icon"><img src={require("../assets/images/icon/market-value/icon2.png")} alt="icon" /></div>
-                                </td>
-                                <td className="coin-name">Dứa Đồng Giao</td>
-                                <td className="buy">$ 56746,857</td>
-                                <td className="sell">22/6/2019</td>
-                                <td className="sell">123 ton</td>
-                                <td className="attachments">VietGAP</td>
-                                <td className="stats-chart">45 <img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
-                              </tr>
-                              <tr>
-                                <td className="mv-icon">
-                                  <div className="mv-icon"><img src={require("../assets/images/icon/market-value/icon3.png")} alt="icon" /></div>
-                                </td>
-                                <td className="coin-name">Chuối Lào Cai</td>
-                                <td className="buy">$ 56746,857</td>
-                                <td className="sell">22/6/2019</td>
-                                <td className="sell">123 ton</td>
-                                <td className="attachments">JGAP</td>
-                                <td className="stats-chart">11 <img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
-                              </tr>
-                              <tr>
-                                <td className="mv-icon">
-                                  <div className="mv-icon"><img src={require("../assets/images/icon/market-value/icon4.png")} alt="icon" /></div>
-                                </td>
-                                <td className="coin-name">Chôm chôm Java</td>
-                                <td className="buy">$ 56746,857</td>
-                                <td className="sell">22/6/2019</td>
-                                <td className="sell">123 ton</td>
-                                <td className="attachments">Global Gap</td>
-                                <td className="stats-chart">29 <img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
-                              </tr>
-                            </tbody></table>
-                          <div className="pagination_area pull-right mt-5">
-                            <ul>
-                              <li><a href="#"><i className="fa fa-chevron-left" /></a></li>
-                              <li><a href="#">1</a></li>
-                              <li><a href="#">2</a></li>
-                              <li><a href="#"><i className="fa fa-chevron-right" /></a></li>
-                            </ul>
+              <div className="row">
+                {/* seo fact area start */}
+                <div className="col-lg-12">
+                  <div className="row">
+                    <div className="col-md-6 mt-5 mb-3">
+                      <div className="card">
+                        <div className="seo-fact sbg1">
+                          <div className="p-4 d-flex justify-content-between align-items-center">
+                            <div className="seofct-icon"><i className="ti-arrow-up" /> SELL</div>
+                            <h2>628</h2>
                           </div>
+                          <canvas id="seolinechart1" height={50} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6 mt-md-5 mb-3">
+                      <div className="card">
+                        <div className="seo-fact sbg2">
+                          <div className="p-4 d-flex justify-content-between align-items-center">
+                            <div className="seofct-icon"><i className="ti-arrow-down" />
+                            <Link
+                              to={{
+                              pathname: "/forsale",
+                              state: {}
+                            }}>
+                                BUY
+                              </Link>
+                            </div>
+                            <h2>734</h2>
+                          </div>
+                          <canvas id="seolinechart2" height={50} />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                {/* seo fact area end */}
+                {/* map area start */}
+                <div className="col-lg-12">
+                  <div className="card">
+                    <div className="card-body">
+                      <h4 className="header-title">Partners</h4>
+                      <div id="seomap" />
+                    </div>
+                  </div>
+                </div>
+                {/* map area end */}
               </div>
-              {/* market value area end */}
-              {/* row area start*/}
             </div>
           </div>
           {/* main content area end */}
           {/* footer area start*/}
           <footer>
             <div className="footer-area">
-              <p>© Copyright 2018. All right reserved</p>
+              <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
           </footer>
           {/* footer area end*/}
-        
+
         {/* offset area start */}
         <div className="offset-area">
           <div className="offset-close"><i className="ti-close" /></div>
@@ -529,13 +465,15 @@ class ForSalePage extends Component {
         {/* bootstrap 4 js */}
         {/* start chart js */}
         {/* start highcharts js */}
-        {/* start zingchart js */}
+        {/* start amcharts */}
         {/* all line chart activation */}
         {/* all pie chart */}
+        {/* all bar chart */}
+        {/* all map chart */}
         {/* others plugins */}
       </div>
     );
-  }
+  };
 }
 
-export default withRouter(ForSalePage);
+export default withRouter(HomePage);

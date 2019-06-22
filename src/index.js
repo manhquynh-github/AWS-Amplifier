@@ -5,13 +5,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 import ForSalePage from './pages/ForSalePage';
+import PostContractPage from './pages/PostContractPage';
 
 const routing = (
   <Router>
     <div>
       <Switch>
-        <Route exact path="/" component={ForSalePage} />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/forsale" component={ForSalePage} />
+        <Route exact path="/postcontract" component={PostContractPage} />
         {/* <Route path="/detail/:id" component={DetailPage} /> */}
       </Switch>
     </div>
