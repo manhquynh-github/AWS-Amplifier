@@ -237,7 +237,13 @@ class HomePage extends Component {
                 {/* seo fact area start */}
                 <div className="col-lg-12">
                   <div className="row">
-                    <div className="col-md-6 mt-5 mb-3">
+                  <div className="col-md-6 mt-5 mb-3">
+                    <Link
+                      to={{
+                        pathname: "/contractlist",
+                        state: {}
+                      }}>
+                             
                       <div className="card">
                         <div className="seo-fact sbg1">
                           <div className="p-4 d-flex justify-content-between align-items-center">
@@ -247,25 +253,24 @@ class HomePage extends Component {
                           <canvas id="seolinechart1" height={50} />
                         </div>
                       </div>
+                    </Link>
                     </div>
-                    <div className="col-md-6 mt-md-5 mb-3">
+                  <div className="col-md-6 mt-md-5 mb-3">
+                    <Link
+                      to={{
+                        pathname: "/forsale",
+                        state: {}
+                      }}>
                       <div className="card">
                         <div className="seo-fact sbg2">
                           <div className="p-4 d-flex justify-content-between align-items-center">
-                            <div className="seofct-icon"><i className="ti-arrow-down" />
-                            <Link
-                              to={{
-                              pathname: "/forsale",
-                              state: {}
-                            }}>
-                                BUY
-                              </Link>
-                            </div>
+                            <div className="seofct-icon"><i className="ti-arrow-down" /> BUY</div>
                             <h2>734</h2>
                           </div>
                           <canvas id="seolinechart2" height={50} />
                         </div>
                       </div>
+                              </Link>
                     </div>
                   </div>
                 </div>

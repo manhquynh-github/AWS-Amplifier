@@ -10,6 +10,7 @@ import ForSalePage from './pages/ForSalePage';
 import PostContractPage from './pages/PostContractPage';
 import AccountPage from './pages/AccountPage';
 import ContractBiddersPage from './pages/ContractBiddersPage';
+import ContractListPage from './pages/ContractListPage';
 
 const routing = (
   <Router>
@@ -20,6 +21,7 @@ const routing = (
         <Route exact path="/postcontract" component={PostContractPage} />
         <Route exact path="/account" component={AccountPage} />
         <Route exact path="/contractbidders" component={ContractBiddersPage} />
+        <Route exact path="/contractlist" component={ContractListPage} />
         {/* <Route path="/detail/:id" component={DetailPage} /> */}
       </Switch>
     </div>
