@@ -355,6 +355,7 @@ class PostContractPage extends Component {
                     className="user-name dropdown-toggle"
                     data-toggle="dropdown">
                     <Link
+                      style={{ color: 'white' }}
                       to={{
                         pathname: '/account',
                         state: {},

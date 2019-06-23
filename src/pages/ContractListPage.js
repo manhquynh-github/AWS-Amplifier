@@ -258,7 +258,7 @@ class ContractListPage extends Component {
                 <div className="card">
                   <div className="card-body">
                     <div className="d-sm-flex justify-content-between align-items-center">
-                      <h4 className="header-title mb-0">List Of Entrepreneur required</h4>
+                      <h4 className="header-title mb-0">On-going Bidding Contracts</h4>
                     </div>
                     <div className="market-status-table mt-4">
                       <div className="table-responsive">
@@ -266,16 +266,16 @@ class ContractListPage extends Component {
                           <tbody><tr className="heading-td">
                             <td className="coin-name">Project</td>
                             <td className="buy">Starting price</td>
-                            <td className="sell">Sale date</td>
+                            <td className="sell">Expected Shipment Date</td>
                             <td className="sell">Quantity</td>
-                            <td className="attachments">Certifications</td>
-                            <td className="stats-chart">Number of current bidders</td>
+                            <td className="attachments">Standard Required</td>
+                            <td className="stats-chart"># Active Bidders</td>
                           </tr>
                             <tr>
                               <td className="coin-name">Pepper</td>
                               <td className="buy">$6746,857</td>
                               <td className="sell">22/6/2019</td>
-                              <td className="sell">13 Ton</td>
+                              <td className="sell">13 Tons</td>
                               <td className="attachments">JGAP</td>
                               <td className="stats-chart">
                                 <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>
@@ -313,7 +313,7 @@ class ContractListPage extends Component {
                               <td className="coin-name">Pineapple</td>
                               <td className="buy">$ 726,857</td>
                               <td className="sell">22/6/2019</td>
-                              <td className="sell">23 Ton</td>
+                              <td className="sell">23 Tons</td>
                               <td className="attachments">VietGAP</td>
                               <td className="stats-chart">
                                 <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>
@@ -351,7 +351,7 @@ class ContractListPage extends Component {
                               <td className="coin-name">Banana</td>
                               <td className="buy">$746,857</td>
                               <td className="sell">22/6/2019</td>
-                              <td className="sell">12 Ton</td>
+                              <td className="sell">12 Tons</td>
                               <td className="attachments">JGAP</td>
                               <td className="stats-chart">
                                 <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>
@@ -389,7 +389,7 @@ class ContractListPage extends Component {
                               <td className="coin-name">Rambutan</td>
                               <td className="buy">$ 56746,857</td>
                               <td className="sell">22/6/2019</td>
-                              <td className="sell">123 ton</td>
+                              <td className="sell">123 Tons</td>
                               <td className="attachments">Global Gap</td>
                               <td className="stats-chart">
                                 <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>

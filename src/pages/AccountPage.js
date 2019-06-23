@@ -224,6 +224,7 @@ class AccountPage extends Component {
                   <img className="avatar user-thumb" src={require("../assets/images/author/avatar.png")} alt="avatar" />
                     <h4 className="user-name dropdown-toggle" data-toggle="dropdown">
                       <Link
+                      style={{ color: 'white' }}
                         to={{
                           pathname: "/account",
                           state: {}

@@ -213,7 +213,8 @@ class HomePage extends Component {
                   <div className="user-profile pull-right">
                   <img className="avatar user-thumb" src={require("../assets/images/author/avatar.png")} alt="avatar" />
                     <h4 className="user-name dropdown-toggle" data-toggle="dropdown">
-                      <Link
+                    <Link
+                      style={{ color: 'white' }}
                       to={{
                         pathname: "/account",
                         state: {}
