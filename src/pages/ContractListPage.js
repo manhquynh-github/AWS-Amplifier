@@ -19,16 +19,25 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
 
 class ContractListPage extends Component {
   constructor() {
     super();
     this.state = {
       open: false,
+      successOpen: false,
     }
     this.onBidClick = this.onBidClick.bind(this);
     this.onBidOkClick = this.onBidOkClick.bind(this);
     this.onBiddingPriceChange = this.onBiddingPriceChange.bind(this);
+    this.onCloseSuccess = this.onCloseSuccess.bind(this);
+  }
+
+  onCloseSuccess() {
+    this.setState({
+      successOpen: false,
+    });
   }
 
   onBiddingPriceChange(e) {
@@ -44,8 +53,10 @@ class ContractListPage extends Component {
   onBidOkClick() {
     this.setState({
       open: false,
+      successOpen: true,
     });
     console.log(this.state);
+    
   }
 
   onBidClick() {
@@ -718,6 +729,19 @@ class ContractListPage extends Component {
           </Button>
           </DialogActions>
         </Dialog>
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          open={this.state.successOpen}
+          autoHideDuration={2000}
+          onClose={this.onCloseSuccess}
+          ContentProps={{
+            'aria-describedby': 'message-id',
+          }}
+          message={<span id="message-id">Bid successfully!</span>}
+        />
       </div>
     );
   }
