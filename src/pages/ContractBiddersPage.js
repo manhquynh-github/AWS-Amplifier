@@ -26,6 +26,8 @@ class ContractBiddersPage extends Component {
   }
 
   render() {
+    console.log(this.props.location);
+
     return (
       <div>
         <meta charSet="utf-8" />
@@ -280,7 +282,21 @@ class ContractBiddersPage extends Component {
                                 <th scope="col">action</th>
                               </tr>
                             </thead>
-                            <tbody>
+                          <tbody>
+                            {(this.props.location.state &&
+                              this.props.location.state.session &&
+                              this.props.location.state.session.produceName &&
+                              (
+                              <tr>
+                                <th scope="row">Jack</th>
+                                <td>{this.props.location.state.session.biddingPrice}</td>
+                                <td>23 / 07 / 2019</td>
+                                <td><span className="status-p bg-primary">OK</span></td>
+                                <td>
+                                  <button type="button" className="btn btn-success btn-xs mb-3" onClick={this.onAcceptClick}>Accept</button>
+                                </td>
+                              </tr>
+                              ))}
                               <tr>
                                 <th scope="row">John Wick</th>
                                 <td>$723</td>

@@ -28,6 +28,13 @@ class ContractListPage extends Component {
     }
     this.onBidClick = this.onBidClick.bind(this);
     this.onBidOkClick = this.onBidOkClick.bind(this);
+    this.onBiddingPriceChange = this.onBiddingPriceChange.bind(this);
+  }
+
+  onBiddingPriceChange(e) {
+    this.setState({
+      biddingPrice: e.target.value,
+    });
   }
 
   componentDidMount() {
@@ -37,7 +44,8 @@ class ContractListPage extends Component {
   onBidOkClick() {
     this.setState({
       open: false,
-    })
+    });
+    console.log(this.state);
   }
 
   onBidClick() {
@@ -240,7 +248,8 @@ class ContractListPage extends Component {
                           pathname: "/",
                         state: {
                           session: {
-                            ...this.props.location.state.session
+                            ...this.props.location.state.session,
+                            biddingPrice: this.state.biddingPrice,
                           }
                         }
                         }}>
@@ -287,7 +296,10 @@ class ContractListPage extends Component {
                             <td className="attachments">Standard Required</td>
                             <td className="stats-chart"># Active Bidders</td>
                           </tr>
-                            {(this.props.location.state !== undefined && (
+                            {(this.props.location.state &&
+                              this.props.location.state.session &&
+                              this.props.location.state.session.produceName &&
+                              (
                               <tr>
                                 <td className="coin-name">{this.props.location.state.session.produceName}</td>
                                 <td className="buy">{this.props.location.state.session.startingPrice}</td>
@@ -692,8 +704,9 @@ class ContractListPage extends Component {
             <TextField
               autoFocus
               margin="dense"
-              type="number"
+              type="text"
               fullWidth
+              onChange={this.onBiddingPriceChange}
             />           
           </DialogContent>
           <DialogActions>

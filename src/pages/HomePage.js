@@ -18,7 +18,9 @@ class HomePage extends Component {
   render() {
     let session = {};
     
-    if (this.props.location.state !== undefined) {   
+    if (this.props.location.state &&
+        this.props.location.state.session &&
+        this.props.location.state.session.produceName) {   
       session = {
         ...this.props.location.state.session
       };
