@@ -78,6 +78,12 @@ class PostContractPage extends Component {
   onSubmitClick() {
     this.props.history.push({
       pathname: `/`,
+      state: {
+        session: {
+          ...this.props.location.state.session,
+          ...this.state,
+        },
+      },
     });
   }
 
@@ -336,7 +342,17 @@ class PostContractPage extends Component {
                   <h4 className="page-title pull-left">Entrepreneur</h4>
                   <ul className="breadcrumbs pull-left">
                     <li>
-                      <a href="index.html">Home</a>
+                      <Link
+                        to={{
+                          pathname: '/',
+                          state: {
+                            session: {
+                              ...this.props.location.state.session,
+                            },
+                          },
+                        }}>
+                        Home
+                      </Link>
                     </li>
                     <li>
                       <span>New Contract</span>
@@ -358,9 +374,13 @@ class PostContractPage extends Component {
                       style={{ color: 'white' }}
                       to={{
                         pathname: '/account',
-                        state: {},
+                        state: {
+                          session: {
+                            ...this.props.location.state.session,
+                          },
+                        },
                       }}>
-                      Kumkum Rai
+                      Company Rai
                     </Link>
                     <i className="fa fa-angle-down" />
                   </h4>

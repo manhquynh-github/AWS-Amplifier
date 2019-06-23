@@ -30,6 +30,10 @@ class ContractListPage extends Component {
     this.onBidOkClick = this.onBidOkClick.bind(this);
   }
 
+  componentDidMount() {
+    console.log(this.props.location.state.session);
+  }
+
   onBidOkClick() {
     this.setState({
       open: false,
@@ -43,6 +47,8 @@ class ContractListPage extends Component {
   }
 
   render() {
+    console.log(this.props.location.state);
+
     return (
       <div>
         <meta charSet="utf-8" />
@@ -229,7 +235,17 @@ class ContractListPage extends Component {
                 <div className="breadcrumbs-area clearfix">
                   <h4 className="page-title pull-left">Buy</h4>
                   <ul className="breadcrumbs pull-left">
-                    <li><a href="index.html">Home</a></li>
+                    <li><Link
+                        to={{
+                          pathname: "/",
+                        state: {
+                          session: {
+                            ...this.props.location.state.session
+                          }
+                        }
+                        }}>
+                        Home
+                        </Link></li>
                     <li><span>Buy</span></li>
                   </ul>
                 </div>
@@ -271,6 +287,46 @@ class ContractListPage extends Component {
                             <td className="attachments">Standard Required</td>
                             <td className="stats-chart"># Active Bidders</td>
                           </tr>
+                            {(this.props.location.state !== undefined && (
+                              <tr>
+                                <td className="coin-name">{this.props.location.state.session.produceName}</td>
+                                <td className="buy">{this.props.location.state.session.startingPrice}</td>
+                                <td className="sell">{this.props.location.state.session.expectedShipmentDate}</td>
+                                <td className="sell">{this.props.location.state.session.quantity}</td>
+                                <td className="attachments">{this.props.location.state.session.standardRequired}</td>
+                                <td className="stats-chart">
+                                  <button type="button" className="btn btn-rounded btn-success mb-3" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.onBidClick}>Bid</button>
+                                  <div className="modal fade" id="exampleModalCenter">
+                                    <div className="modal-dialog modal-dialog-centered" role="document">
+                                      <div className="modal-content">
+                                        <div className="modal-header">
+                                          <h5 className="modal-title">Your proposal price</h5>
+                                          <button type="button" className="close" data-dismiss="modal"><span>×</span></button>
+                                        </div>
+                                        <div className="modal-body">
+                                          <div className="card">
+                                            <div className="card-body">
+                                              <form>
+                                                <div className="form-row align-items-center">
+                                                  <div className="col-sm-6 my-1">
+                                                    <label className="sr-only" htmlFor="inlineFormInputPrice">Price proposal</label>
+                                                    <input type="text" className="form-control" id="inlineFormInputPrice" placeholder="ex: 100$" />
+                                                  </div>
+                                                </div>
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="modal-footer">
+                                          <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          <button type="button" className="btn btn-primary">Confirm</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            ))}
                             <tr>
                               <td className="coin-name">Pepper</td>
                               <td className="buy">$6746,857</td>

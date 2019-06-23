@@ -14,7 +14,17 @@ import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 
 class HomePage extends Component {
+
   render() {
+    let session = {};
+    
+    if (this.props.location.state !== undefined) {   
+      session = {
+        ...this.props.location.state.session
+      };
+      console.log(session);
+    }
+      
     return (
       <div>
         <meta charSet="utf-8" />
@@ -217,9 +227,11 @@ class HomePage extends Component {
                       style={{ color: 'white' }}
                       to={{
                         pathname: "/account",
-                        state: {}
+                        state: {
+                          session: {...session}
+                        }
                       }}>
-                      Kumkum Rai
+                      Carum Fold
                       </Link>
                       <i className="fa fa-angle-down" />
                     </h4>
@@ -242,7 +254,9 @@ class HomePage extends Component {
                     <Link
                       to={{
                         pathname: "/contractlist",
-                        state: {}
+                        state: {
+                          session: {...session}
+                        }
                       }}>
                              
                       <div className="card">
@@ -260,7 +274,9 @@ class HomePage extends Component {
                     <Link
                       to={{
                         pathname: "/forsale",
-                        state: {}
+                        state: {
+                          session: {...session}
+                        }
                       }}>
                       <div className="card">
                         <div className="seo-fact sbg2">

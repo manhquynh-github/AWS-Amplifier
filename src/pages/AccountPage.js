@@ -214,7 +214,17 @@ class AccountPage extends Component {
                   <div className="breadcrumbs-area clearfix">
                     <h4 className="page-title pull-left">Account Management</h4>
                     <ul className="breadcrumbs pull-left">
-                      <li><a href="index.html">Home</a></li>
+                      <li><Link
+                        to={{
+                          pathname: "/",
+                        state: {
+                          session: {
+                            ...this.props.location.state.session
+                          }
+                        }
+                        }}>
+                        Home
+                        </Link></li>
                       <li><span>Account Management</span></li>
                     </ul>
                   </div>
@@ -227,9 +237,13 @@ class AccountPage extends Component {
                       style={{ color: 'white' }}
                         to={{
                           pathname: "/account",
-                          state: {}
+                          state: {
+                            session: {
+                              ...this.props.location.state.session
+                            }
+                          }
                         }}>
-                        Kumkum Rai
+                        Company Rai
                         </Link>
                       <i className="fa fa-angle-down" />
                     </h4>
@@ -270,7 +284,11 @@ class AccountPage extends Component {
                                 Link
                                 to={{
                                   pathname: "/contractbidders",
-                                  state: {}
+                                  state: {
+                                    session: {
+                                      ...this.props.location.state.session
+                                    }
+                                  }
                                 }}> Watermelon
                                 </Link></td>
                                 <td>09 / 07 / 2018</td>

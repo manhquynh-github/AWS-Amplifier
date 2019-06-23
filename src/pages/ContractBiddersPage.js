@@ -218,7 +218,17 @@ class ContractBiddersPage extends Component {
                   <div className="breadcrumbs-area clearfix">
                     <h4 className="page-title pull-left">Dashboard</h4>
                     <ul className="breadcrumbs pull-left">
-                      <li><a href="index.html">Home</a></li>
+                      <li><Link
+                        to={{
+                          pathname: "/",
+                        state: {
+                          session: {
+                            ...this.props.location.state.session
+                          }
+                        }
+                        }}>
+                        Home
+                        </Link></li>
                       <li><span>Table Basic</span></li>
                     </ul>
                   </div>
@@ -231,9 +241,13 @@ class ContractBiddersPage extends Component {
                         style={{ color: 'white' }}
                         to={{
                           pathname: "/account",
-                          state: {}
+                          state: {
+                            session: {
+                              ...this.props.location.state.session
+                            }
+                          }
                         }}>
-                        Kumkum Rai
+                        Company Rai
                       </Link>
                       <i className="fa fa-angle-down" />
                     </h4>
