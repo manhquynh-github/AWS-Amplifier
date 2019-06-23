@@ -24,13 +24,6 @@ class ForSalePage extends Component {
     this.props.history.push({
       pathname: `/postcontract`,
     });
-    // return (
-    //   <Redirect
-    //     to={{
-    //       pathname: "/forsale",
-    //       state: {}
-    //     }}/>
-    // )
   }
 
   render()
