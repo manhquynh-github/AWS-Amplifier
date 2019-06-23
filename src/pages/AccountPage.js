@@ -14,6 +14,17 @@ import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 
 class AccountPage extends Component {
+  constructor() {
+    super();
+    this.onViewClick = this.onViewClick.bind(this);
+  }
+
+  onViewClick() {
+    this.props.history.push({
+      pathname: `/contractbidders`,
+    });
+  }
+
   render() {
     return (
       <div>
@@ -244,10 +255,10 @@ class AccountPage extends Component {
                             <thead className="text-uppercase">
                               <tr>
                                 <th scope="col">ID</th>
-                                <th scope="col">project</th>
-                                <th scope="col">Deadline</th>
-                                <th scope="col">Number of people requesting to buy</th>
-                                <th scope="col">Highest current price</th>
+                                <th scope="col">Project</th>
+                                <th scope="col">Expected Shipment Date</th>
+                                <th scope="col"># Bidders</th>
+                                <th scope="col">Highest bidding</th>
                                 <th scope="col">Detail</th>
                               </tr>
                             </thead>
@@ -259,13 +270,13 @@ class AccountPage extends Component {
                                 to={{
                                   pathname: "/contractbidders",
                                   state: {}
-                                }}> Dưa hấu Quảng Trị
+                                }}> Watermelon
                                 </Link></td>
                                 <td>09 / 07 / 2018</td>
                                 <td>23<img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
-                                <td><span className="status-p bg-danger">5063$</span></td>
+                                <td><span className="status-p bg-danger">$5063</span></td>
                                 <td>
-                                  <button type="button" className="btn btn-success btn-xs mb-3">View </button>
+                                  <button type="button" className="btn btn-success btn-xs mb-3" onClick={this.onViewClick}>View </button>
                                 </td>
                               </tr>
                               <tr>
@@ -273,7 +284,7 @@ class AccountPage extends Component {
                                 <td>Mark</td>
                                 <td>09 / 07 / 2018</td>
                                 <td>53<img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
-                                <td><span className="status-p bg-danger">5063$</span></td>
+                                <td><span className="status-p bg-danger">$5063</span></td>
                                 <td>
                                   <button type="button" className="btn btn-success btn-xs mb-3">View </button>
                                 </td>
@@ -283,7 +294,7 @@ class AccountPage extends Component {
                                 <td>Mark</td>
                                 <td>09 / 07 / 2018</td>
                                 <td>12<img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
-                                <td><span className="status-p bg-danger">5063$</span></td>
+                                <td><span className="status-p bg-danger">$5063</span></td>
                                 <td>
                                   <button type="button" className="btn btn-success btn-xs mb-3">View </button>
                                 </td>
@@ -293,7 +304,7 @@ class AccountPage extends Component {
                                 <td>Mark</td>
                                 <td>09 / 07 / 2018</td>
                                 <td>98<img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
-                                <td><span className="status-p bg-danger">5063$</span></td>
+                                <td><span className="status-p bg-danger">$5063</span></td>
                                 <td>
                                   <button type="button" className="btn btn-success btn-xs mb-3">View </button>
                                 </td>

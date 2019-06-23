@@ -479,7 +479,7 @@ class PostContractPage extends Component {
                                 onChange={this.onStartingPriceChanged}
                                 type="text"
                                 className="form-control"
-                                placeholder="ex: 1000$"
+                                placeholder="ex: $1000"
                                 required
                               />
                               <div className="invalid-feedback">
