@@ -20,9 +20,6 @@ class ContractBiddersPage extends Component {
   }
   
   onAcceptClick() {
-    // this.props.history.push({
-    //   pathname: '/'
-    // })
     fetch('https://cloudfarm.azurewebsites.net/api/cloudfarm/contracts', {
       method: 'POST',
       headers: {
@@ -39,7 +36,10 @@ class ContractBiddersPage extends Component {
         "term": "389urjkasdnksndv"
       }
     });
-    console.log("ok");
+    alert('Accept successfully.');
+    this.props.history.push({
+      pathname: '/'
+    })
   }
 
   render() {
