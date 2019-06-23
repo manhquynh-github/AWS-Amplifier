@@ -14,6 +14,17 @@ import { Link } from 'react-router-dom';
 import { withRouter } from "react-router";
 
 class ContractBiddersPage extends Component {
+  constructor() {
+    super();
+    this.onAcceptClick = this.onAcceptClick.bind(this);
+  }
+  
+  onAcceptClick() {
+    this.props.history.push({
+      pathname: '/'
+    })
+  }
+
   render() {
     return (
       <div>
@@ -72,7 +83,7 @@ class ContractBiddersPage extends Component {
                           <a href="#" className="notify-item">
                             <div className="notify-thumb"><i className="ti-comments-smiley btn-info" /></div>
                             <div className="notify-text">
-                              <p>New Commetns On Post</p>
+                              <p>New Comments On Post</p>
                               <span>30 Seconds ago</span>
                             </div>
                           </a>
@@ -86,7 +97,7 @@ class ContractBiddersPage extends Component {
                           <a href="#" className="notify-item">
                             <div className="notify-thumb"><i className="ti-comments-smiley btn-info" /></div>
                             <div className="notify-text">
-                              <p>New Commetns On Post</p>
+                              <p>New Comments On Post</p>
                               <span>30 Seconds ago</span>
                             </div>
                           </a>
@@ -241,54 +252,54 @@ class ContractBiddersPage extends Component {
                 <div className="col-lg-12 mt-5">
                   <div className="card">
                     <div className="card-body">
-                      <h4 className="header-title">Details about the project - Dưa hấu Quảng Trị</h4>
+                      <h4 className="header-title">Your contract - Watermelon</h4>
                       <div className="single-table">
                         <div className="table-responsive">
                           <table className="table text-center">
                             <thead className="text-uppercase bg-light">
                               <tr>
                                 <th scope="col">Name</th>
-                                <th scope="col">Suggested Price</th>
-                                <th scope="col">date</th>
-                                <th scope="col">Meet the standards</th>
+                                <th scope="col">Bidding Price</th>
+                                <th scope="col">Expected Shipment Date</th>
+                                <th scope="col">Standard Status</th>
                                 <th scope="col">action</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <th scope="row">John Wick</th>
-                                <td>723$</td>
+                                <td>$723</td>
                                 <td>23 / 07 / 2019</td>
                                 <td><span className="status-p bg-primary">OK</span></td>
                                 <td>
-                                  <button type="button" className="btn btn-success btn-xs mb-3">Confirm transaction </button>
+                                  <button type="button" className="btn btn-success btn-xs mb-3" onClick={this.onAcceptClick}>Accept</button>
                                 </td>
                               </tr>
                               <tr>
                                 <th scope="row">John Wick</th>
-                                <td>723$</td>
+                                <td>$723</td>
                                 <td>23 / 07 / 2019</td>
                                 <td><span className="status-p bg-primary">OK</span></td>
                                 <td>
-                                  <button type="button" className="btn btn-success btn-xs mb-3">Confirm transaction </button>
+                                  <button type="button" className="btn btn-success btn-xs mb-3" onClick={this.onAcceptClick}>Accept</button>
                                 </td>
                               </tr>
                               <tr>
                                 <th scope="row">John Wick</th>
-                                <td>723$</td>
+                                <td>$723</td>
                                 <td>23 / 07 / 2019</td>
                                 <td><span className="status-p bg-primary">OK</span></td>
                                 <td>
-                                  <button type="button" className="btn btn-success btn-xs mb-3">Confirm transaction </button>
+                                  <button type="button" className="btn btn-success btn-xs mb-3" onClick={this.onAcceptClick}>Accept</button>
                                 </td>
                               </tr>
                               <tr>
                                 <th scope="row">John Wick</th>
-                                <td>723$</td>
+                                <td>$723</td>
                                 <td>23 / 07 / 2019</td>
                                 <td><span className="status-p bg-primary">OK</span></td>
                                 <td>
-                                  <button type="button" className="btn btn-success btn-xs mb-3">Confirm transaction </button>
+                                  <button type="button" className="btn btn-success btn-xs mb-3" onClick={this.onAcceptClick}>Accept</button>
                                 </td>
                               </tr>
                             </tbody>
