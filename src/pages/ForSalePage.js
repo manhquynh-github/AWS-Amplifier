@@ -255,12 +255,12 @@ class ForSalePage extends Component {
               <div className="row mt-5 mb-5">
                 <div className="col-12">
                   <div className="exchange-btn">
-                    <button type="submit" onClick={this.onPostContractClick} >Register To Buy The Project Now</button>
+                    <button type="submit" onClick={this.onPostContractClick} >Post A New Contract</button>
                   </div>
                   <div className="card">
                     <div className="card-body">
                       <div className="d-sm-flex justify-content-between align-items-center">
-                        <h4 className="header-title mb-0">List Of Farmer Projects For Sale</h4>
+                        <h4 className="header-title mb-0">Farming Projects For Sale</h4>
                         <select className="custome-select border-0 pr-3">
                           <option selected>Last 24 Hours</option>
                           <option value={0}>01 July 2018</option>
@@ -273,15 +273,15 @@ class ForSalePage extends Component {
                               <td className="mv-icon">Image</td>
                               <td className="coin-name">Project</td>
                               <td className="buy">Starting price</td>
-                              <td className="sell">Sale date</td>
-                              <td className="sell">Scale</td>
-                              <td className="attachments">Certifications</td>
-                              <td className="stats-chart">Number of current bidders</td>
+                              <td className="sell">Expected Shipment Date</td>
+                              <td className="sell">Quantity</td>
+                              <td className="attachments">Standard</td>
+                              <td className="stats-chart"># Active Bidders</td>
                             </tr>
                               <tr>
                                 <td className="mv-icon"><img src={require("../assets/images/icon/market-value/icon1.png")} alt="icon" />
                                 </td>
-                                <td className="coin-name">Hồ tiêu Phú Quốc</td>
+                                <td className="coin-name">Pepper</td>
                                 <td className="buy">$ 56746,857</td>
                                 <td className="sell">22/6/2019</td>
                                 <td className="sell">123 ton</td>
@@ -292,7 +292,7 @@ class ForSalePage extends Component {
                                 <td className="mv-icon">
                                   <div className="mv-icon"><img src={require("../assets/images/icon/market-value/icon2.png")} alt="icon" /></div>
                                 </td>
-                                <td className="coin-name">Dứa Đồng Giao</td>
+                                <td className="coin-name">Pineapple</td>
                                 <td className="buy">$ 56746,857</td>
                                 <td className="sell">22/6/2019</td>
                                 <td className="sell">123 ton</td>
@@ -303,7 +303,7 @@ class ForSalePage extends Component {
                                 <td className="mv-icon">
                                   <div className="mv-icon"><img src={require("../assets/images/icon/market-value/icon3.png")} alt="icon" /></div>
                                 </td>
-                                <td className="coin-name">Chuối Lào Cai</td>
+                                <td className="coin-name">Banana</td>
                                 <td className="buy">$ 56746,857</td>
                                 <td className="sell">22/6/2019</td>
                                 <td className="sell">123 ton</td>
@@ -314,7 +314,7 @@ class ForSalePage extends Component {
                                 <td className="mv-icon">
                                   <div className="mv-icon"><img src={require("../assets/images/icon/market-value/icon4.png")} alt="icon" /></div>
                                 </td>
-                                <td className="coin-name">Chôm chôm Java</td>
+                                <td className="coin-name">Rambutan</td>
                                 <td className="buy">$ 56746,857</td>
                                 <td className="sell">22/6/2019</td>
                                 <td className="sell">123 ton</td>
