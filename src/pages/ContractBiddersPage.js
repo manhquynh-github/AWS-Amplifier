@@ -27,6 +27,15 @@ class ContractBiddersPage extends Component {
 
   render() {
     console.log(this.props.location);
+    let session = {};
+    
+    if (this.props.location.state &&
+      this.props.location.state.session &&
+      this.props.location.state.session.biddingPrice) {
+      session = {
+        ...this.props.location.state.session
+      };
+    }
 
     return (
       <div>
@@ -225,7 +234,7 @@ class ContractBiddersPage extends Component {
                           pathname: "/",
                         state: {
                           session: {
-                            ...this.props.location.state.session
+                            ...session
                           }
                         }
                         }}>
@@ -245,7 +254,7 @@ class ContractBiddersPage extends Component {
                           pathname: "/account",
                           state: {
                             session: {
-                              ...this.props.location.state.session
+                              ...session
                             }
                           }
                         }}>
