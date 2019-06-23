@@ -212,7 +212,7 @@ class AccountPage extends Component {
               <div className="row align-items-center">
                 <div className="col-sm-6">
                   <div className="breadcrumbs-area clearfix">
-                    <h4 className="page-title pull-left">Account Management</h4>
+                    <h4 className="page-title pull-left">My Account</h4>
                     <ul className="breadcrumbs pull-left">
                       <li><Link
                         to={{
@@ -263,7 +263,7 @@ class AccountPage extends Component {
                 <div className="col-12 mt-5">
                   <div className="card">
                     <div className="card-body">
-                      <h4 className="header-title">List Of Project Purchase Registration</h4>
+                      <h4 className="header-title">My Posted Contracts</h4>
                       <div className="single-table">
                         <div className="table-responsive">
                           <table className="table table-hover progress-table text-center">
@@ -273,15 +273,39 @@ class AccountPage extends Component {
                                 <th scope="col">Project</th>
                                 <th scope="col">Expected Shipment Date</th>
                                 <th scope="col"># Bidders</th>
-                                <th scope="col">Highest bidding</th>
+                                <th scope="col">Lowest bidding</th>
                                 <th scope="col">Detail</th>
                               </tr>
                             </thead>
-                            <tbody>
+                          <tbody>
+                            {this.props.location.state &&
+                              this.props.location.state.session &&
+                              this.props.location.state.session.produceName && (
+                              <tr>
+                                <th scope="row">0</th>
+                                <td>
+                                  <Link
+                                    to={{
+                                      pathname: "/contractbidders",
+                                      state: {
+                                        session: {
+                                          ...this.props.location.state.session
+                                        }
+                                      }
+                                    }}> {this.props.location.state.session.produceName}
+                                </Link></td>
+                                <td>{this.props.location.state.session.expectedShipmentDate}</td>
+                                <td>0</td>
+                                <td><span className="status-p bg-danger">{this.props.location.state.session.startingPrice}</span></td>
+                                <td>
+                                  <button type="button" className="btn btn-success btn-xs mb-3" onClick={this.onViewClick}>View </button>
+                                </td>
+                              </tr> 
+                            )}
                               <tr>
                                 <th scope="row">1</th>
-                              <td><
-                                Link
+                              <td>
+                                <Link
                                 to={{
                                   pathname: "/contractbidders",
                                   state: {
@@ -300,7 +324,16 @@ class AccountPage extends Component {
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
-                                <td>Mark</td>
+                              <td><Link
+                                to={{
+                                  pathname: "/contractbidders",
+                                  state: {
+                                    session: {
+                                      ...this.props.location.state.session
+                                    }
+                                  }
+                                }}> Mango
+                                </Link></td>
                                 <td>09 / 07 / 2018</td>
                                 <td>53<img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
                                 <td><span className="status-p bg-danger">$5063</span></td>
@@ -310,7 +343,16 @@ class AccountPage extends Component {
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
-                                <td>Mark</td>
+                                <td><Link
+                                to={{
+                                  pathname: "/contractbidders",
+                                  state: {
+                                    session: {
+                                      ...this.props.location.state.session
+                                    }
+                                  }
+                                }}> Pear
+                                </Link></td>
                                 <td>09 / 07 / 2018</td>
                                 <td>12<img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
                                 <td><span className="status-p bg-danger">$5063</span></td>
@@ -320,7 +362,16 @@ class AccountPage extends Component {
                               </tr>
                               <tr>
                                 <th scope="row">4</th>
-                                <td>Mark</td>
+                              <td><Link
+                                to={{
+                                  pathname: "/contractbidders",
+                                  state: {
+                                    session: {
+                                      ...this.props.location.state.session
+                                    }
+                                  }
+                                }}> Apple
+                                </Link></td>
                                 <td>09 / 07 / 2018</td>
                                 <td>98<img src={require("../assets/images/icon/market-value/triangle-up.png")} alt="icon" /></td>
                                 <td><span className="status-p bg-danger">$5063</span></td>

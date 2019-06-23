@@ -448,7 +448,7 @@ class PostContractPage extends Component {
                               <div className="input-group">
                                 <input
                                   onChange={this.onQuantityChanged}
-                                  type="number"
+                                  type="text"
                                   className="form-control"
                                   id="validationCustomUsername"
                                   placeholder="1000 tons"

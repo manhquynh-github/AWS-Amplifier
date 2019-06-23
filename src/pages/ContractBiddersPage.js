@@ -285,7 +285,7 @@ class ContractBiddersPage extends Component {
                           <tbody>
                             {(this.props.location.state &&
                               this.props.location.state.session &&
-                              this.props.location.state.session.produceName &&
+                              this.props.location.state.session.biddingPrice &&
                               (
                               <tr>
                                 <th scope="row">Jack</th>
@@ -298,7 +298,7 @@ class ContractBiddersPage extends Component {
                               </tr>
                               ))}
                               <tr>
-                                <th scope="row">John Wick</th>
+                                <th scope="row">Roni Ann</th>
                                 <td>$723</td>
                                 <td>23 / 07 / 2019</td>
                                 <td><span className="status-p bg-primary">OK</span></td>
@@ -307,7 +307,7 @@ class ContractBiddersPage extends Component {
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">John Wick</th>
+                                <th scope="row">Camry Dan</th>
                                 <td>$723</td>
                                 <td>23 / 07 / 2019</td>
                                 <td><span className="status-p bg-primary">OK</span></td>
@@ -316,7 +316,7 @@ class ContractBiddersPage extends Component {
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">John Wick</th>
+                                <th scope="row">Helen Tan</th>
                                 <td>$723</td>
                                 <td>23 / 07 / 2019</td>
                                 <td><span className="status-p bg-primary">OK</span></td>
@@ -325,7 +325,7 @@ class ContractBiddersPage extends Component {
                                 </td>
                               </tr>
                               <tr>
-                                <th scope="row">John Wick</th>
+                                <th scope="row">Naldo Will</th>
                                 <td>$723</td>
                                 <td>23 / 07 / 2019</td>
                                 <td><span className="status-p bg-primary">OK</span></td>
