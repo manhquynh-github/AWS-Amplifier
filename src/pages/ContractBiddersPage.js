@@ -20,9 +20,26 @@ class ContractBiddersPage extends Component {
   }
   
   onAcceptClick() {
-    this.props.history.push({
-      pathname: '/'
-    })
+    // this.props.history.push({
+    //   pathname: '/'
+    // })
+    fetch('https://cloudfarm.azurewebsites.net/api/cloudfarm/contracts', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: {
+        "id": 3,
+        "namecontract": "contract",
+        "standard": "VietGAP",
+        "namecompany": "ABC JSC",
+        "namefarmer": "Nguyen Van A",
+        "totalprice": 1000000,
+        "term": "389urjkasdnksndv"
+      }
+    });
+    console.log("ok");
   }
 
   render() {
